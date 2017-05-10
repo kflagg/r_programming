@@ -2,7 +2,7 @@
 title: "An Introduction to Object-Oriented Programming Using R"
 author: "K.A. Flagg"
 date: "`r format(Sys.time(), '%B %e, %Y')`"
-knit: "bookdown::render_book"
+knit: bookdown::render_book
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
