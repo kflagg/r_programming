@@ -1,8 +1,18 @@
 # R Code
 
-- `print`, `cat`
+- `print()`, `cat()`
 - typing in the terminal, `source`, Rscript
 - Comments
+
+## Assigned Reading
+
+- [R4DS Sections 1.4-1.6](http://r4ds.had.co.nz/introduction.html#prerequisites)
+
+
+## How R Executes Code
+
+
+## Running R Code from Source Files
 
 The file [`examples/intro_example.r`](examples/intro_example.r) contains the following code.
 
@@ -10,9 +20,13 @@ The file [`examples/intro_example.r`](examples/intro_example.r) contains the fol
 cat examples/intro_example.r
 ```
 
-In the R terminal, use the `source` function to run the code in the file. The
-`print.eval = TRUE` is an _argument_ to the function which tells R to print
-the results of any expressions in the source file.
+In the R terminal, use the `source()` command to run the code in the file. This
+command is an example of a _function_, or block of code that is reused by
+calling its name. The text in parentheses are inputs to the function, called
+_arguments_. The first argument (in quotes) is the name of the source file to
+read. The second argument, `print.eval = TRUE`, tells R to print out the
+results of any expressions in the source file. We will learn much more about
+functions in Section 5.
 
 ```{r}
 source('examples/intro_example.r', print.eval = TRUE)
@@ -24,3 +38,12 @@ execute R code saved in a file.
 ```{r engine = 'bash'}
 Rscript examples/intro_example.r
 ```
+
+
+## Exercises
+
+1. The traditional first program written by students in a computer programming
+  course is `Hello World!`, which simply prints the text "Hello World!" on the
+  screen. Write R code to output "Hellow World!" (or something similar), save
+  the code in a `.r` file, and run the file using either `source()` or
+  `Rscript`.

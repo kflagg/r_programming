@@ -105,7 +105,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#materials"><i class="fa fa-check"></i>Materials</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-outline"><i class="fa fa-check"></i>Course Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="r-code.html"><a href="r-code.html"><i class="fa fa-check"></i><b>1</b> R Code</a></li>
+<li class="chapter" data-level="1" data-path="r-code.html"><a href="r-code.html"><i class="fa fa-check"></i><b>1</b> R Code</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-code.html"><a href="r-code.html#assigned-reading"><i class="fa fa-check"></i><b>1.1</b> Assigned Reading</a></li>
+<li class="chapter" data-level="1.2" data-path="r-code.html"><a href="r-code.html#how-r-executes-code"><i class="fa fa-check"></i><b>1.2</b> How R Executes Code</a></li>
+<li class="chapter" data-level="1.3" data-path="r-code.html"><a href="r-code.html#running-r-code-from-source-files"><i class="fa fa-check"></i><b>1.3</b> Running R Code from Source Files</a></li>
+<li class="chapter" data-level="1.4" data-path="r-code.html"><a href="r-code.html#exercises"><i class="fa fa-check"></i><b>1.4</b> Exercises</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="data-types-and-operations.html"><a href="data-types-and-operations.html"><i class="fa fa-check"></i><b>2</b> Data Types and Operations</a></li>
 <li class="chapter" data-level="3" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>3</b> Data Structures</a><ul>
 <li class="chapter" data-level="3.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>3.1</b> Vectors</a></li>
@@ -135,20 +140,38 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="r-code" class="section level1">
 <h1><span class="header-section-number">1</span> R Code</h1>
 <ul>
-<li><code>print</code>, <code>cat</code></li>
+<li><code>print()</code>, <code>cat()</code></li>
 <li>typing in the terminal, <code>source</code>, Rscript</li>
 <li>Comments</li>
 </ul>
+<div id="assigned-reading" class="section level2">
+<h2><span class="header-section-number">1.1</span> Assigned Reading</h2>
+<ul>
+<li><a href="http://r4ds.had.co.nz/introduction.html#prerequisites">R4DS Sections 1.4-1.6</a></li>
+</ul>
+</div>
+<div id="how-r-executes-code" class="section level2">
+<h2><span class="header-section-number">1.2</span> How R Executes Code</h2>
+</div>
+<div id="running-r-code-from-source-files" class="section level2">
+<h2><span class="header-section-number">1.3</span> Running R Code from Source Files</h2>
 <p>The file <a href="examples/intro_example.r"><code>examples/intro_example.r</code></a> contains the following code.</p>
-<pre><code># Add two numbers.
-2 + 3</code></pre>
-<p>In the R terminal, use the <code>source</code> function to run the code in the file. The <code>print.eval = TRUE</code> is an <em>argument</em> to the function which tells R to print the results of any expressions in the source file.</p>
+<pre><code>#&gt; # Add two numbers.
+#&gt; 2 + 3</code></pre>
+<p>In the R terminal, use the <code>source()</code> command to run the code in the file. This command is an example of a <em>function</em>, or block of code that is reused by calling its name. The text in parentheses are inputs to the function, called <em>arguments</em>. The first argument (in quotes) is the name of the source file to read. The second argument, <code>print.eval = TRUE</code>, tells R to print out the results of any expressions in the source file. We will learn much more about functions in Section 5.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&#39;examples/intro_example.r&#39;</span>, <span class="dt">print.eval =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre><code>[1] 5</code></pre>
+<pre><code>#&gt; [1] 5</code></pre>
 <p>From the system terminal or command prompt, you can use the <code>Rscript</code> command execute R code saved in a file.</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">Rscript</span> examples/intro_example.r</code></pre></div>
-<pre><code>[1] 5</code></pre>
+<pre><code>#&gt; [1] 5</code></pre>
+</div>
+<div id="exercises" class="section level2">
+<h2><span class="header-section-number">1.4</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li>The traditional first program written by students in a computer programming course is <code>Hello World!</code>, which simply prints the text “Hello World!” on the screen. Write R code to output “Hellow World!” (or something similar), save the code in a <code>.r</code> file, and run the file using either <code>source()</code> or <code>Rscript</code>.</li>
+</ol>
 
+</div>
 </div>
             </section>
 

@@ -21,7 +21,7 @@ link-citations: yes
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = NA)
+knitr::opts_chunk$set(echo = TRUE, comment = '#>')
 ```
 
 
@@ -65,8 +65,8 @@ Upon completion of this course, you will be able to:
 Naturally, you will need a recent version of [R](https://www.r-project.org/).
 
 The primary text for this course is _R for Data Science_ [@r4ds]. The
-__required__ readings will be assigned from the most up-to-date
-[online version](http://r4ds.had.co.nz/), but you may purchase a physical copy
+__required__ readings will be assigned from the most up-to-date online version
+of [r4ds](http://r4ds.had.co.nz/), but you may purchase a physical copy
 if you wish. This book teaches a useful and standard set of R tools, and is
 organized to emphasize analysis and communication more than programming (but
 the brief section on programming is excellent). Please note that we will cover the
@@ -80,7 +80,10 @@ R, but acquiring your own copy is __optional__.
 
 ## Course Outline {-}
 
-This course is in development, but the following is a tentative list of topics that will be included.
+This course is in development, but the following is a tentative list of topics that will be included. Each section begins with assigned reading material (which
+should be read first), then includes additional notes elaborating upon the
+important concepts or covering additional topics not included in the reading,
+and ends with exercises to be done as homework.
 
 1. [R Code][R Code]
     - Input, output, running code
