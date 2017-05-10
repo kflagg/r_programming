@@ -1,0 +1,10 @@
+# Conditional Execution and Loops
+
+```{r}
+sky <- 'blue'
+if(sky == 'blue'){
+  cat('Earth')
+}else if(sky == 'ref'){
+  cat('Mars')
+}else cat('Where are we?')
+```

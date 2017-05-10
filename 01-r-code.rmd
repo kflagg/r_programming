@@ -1,0 +1,26 @@
+# R Code
+
+- `print`, `cat`
+- typing in the terminal, `source`, Rscript
+- Comments
+
+The file [`examples/intro_example.r`](examples/intro_example.r) contains the following code.
+
+```{r engine = 'bash', echo = FALSE}
+cat examples/intro_example.r
+```
+
+In the R terminal, use the `source` function to run the code in the file. The
+`print.eval = TRUE` is an _argument_ to the function which tells R to print
+the results of any expressions in the source file.
+
+```{r}
+source('examples/intro_example.r', print.eval = TRUE)
+```
+
+From the system terminal or command prompt, you can use the `Rscript` command
+execute R code saved in a file.
+
+```{r engine = 'bash'}
+Rscript examples/intro_example.r
+```

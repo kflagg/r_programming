@@ -1,0 +1,97 @@
+---
+title: "An Introduction to Object-Oriented Programming Using R"
+author: "K.A. Flagg"
+date: "`r format(Sys.time(), '%B %e, %Y')`"
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    split: chapter
+    split_bib: no
+rmd_files: [
+  "01-r_code.rmd",
+  "02-data_types.rmd",
+  "03-data_structures.rmd",
+  "04-conditional",
+  "refernces.rmd",
+]
+bibliography: references.bib
+biblio-style: apalike
+link-citations: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
+
+# Syllabus {-}
+
+Statistics and Data Science are fields that increasingly require computational
+problem-solving skills and bespoke solutions that are not implemented in
+point-and-click software. Thus, programming languages developed for
+scientific computing have become ubiquitous, and the free R language [@baser]
+is now central to many Statistics courses and jobs.
+
+Unfortunately, Statistics education often focuses exclusively on using R as a
+tool for implementing and demonstrating statistical concepts; this does a
+disservice to students who are left to fend for themselves when presented
+tasks or error messages that do not fit into their set of familiar R
+experiences. Students in Statistics programs need to be R programmers, not
+just R users. Therefore, the goal of this course is to teach you to think like
+a programmer.
+
+This course will teach you both R and the concepts of object-oriented
+programming. If you are an aspiring statistician who wants to improve in
+either or both of those areas, this course is for you. If you have no R or
+programming experience, you will get a solid foundation in both. If you have
+used R before but had no formal programming training, this course will make
+you a much more effective R programmer. If you have had training as an
+object-oriented programmer, you will learn the R language and how to apply
+object-oriented programming to statistical analysis.
+
+## Learning Outcomes {-}
+
+Upon completion of this course, you will be able to:
+
+- Explain how computers interpret and execute code.
+- Evaluate conditional statements manually and in R.
+- Describe and implement functions, objects, and methods in R.
+- Develop conceptual models of programs and translate them into code.
+- Debug your own programs and implement error/warning messages in R.
+
+## Materials {-}
+
+Naturally, you will need a recent version of [R](https://www.r-project.org/).
+
+The primary text for this course is _R for Data Science_ [@r4ds]. The
+__required__ readings will be assigned from the most up-to-date
+[online version](http://r4ds.had.co.nz/), but you may purchase a physical copy
+if you wish. This book teaches a useful and standard set of R tools, and is
+organized to emphasize analysis and communication more than programming (but
+the brief section on programming is excellent). Please note that we will cover the
+topics in a very different order from how they are presented in the book and I
+will frequently point out the differences in pedagogical philosophy between
+statisticians and computer scientists.
+
+I will adapt additional material from _The Art of R Programming_ [@matloff].
+This is a great reference for the basic features and programming constructs of
+R, but acquiring your own copy is __optional__.
+
+## Course Outline {-}
+
+This course is in development, but the following is a tentative list of topics that will be included.
+
+1. [R Code][R Code]
+    - Input, output, running code
+2. [Data Types and Operations][Data Types and Operations]
+    - Basic variable types (character, numeric, logical)
+    - Mathematical operations
+    - Special values (`NULL`, `Inf`, `NaN`)
+3. [Data Structures][Data Structures]
+    - Vectors, matrices, arrays, lists, data frames
+4. [Conditional Execution and Loops][Conditional Execution and Loops]
+5. Functions
+6. Applying Functions
+7. Objects and Methods
+8. Introduction to Packages

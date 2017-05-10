@@ -1,0 +1,5 @@
+# Data Types and Operations
+
+- characters
+- numeric (integer and double)
+- logical
