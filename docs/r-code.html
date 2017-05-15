@@ -26,7 +26,7 @@
 <meta name="author" content="K.A. Flagg">
 
 
-<meta name="date" content="2017-05-10">
+<meta name="date" content="2017-05-15">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -107,7 +107,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="1" data-path="r-code.html"><a href="r-code.html"><i class="fa fa-check"></i><b>1</b> R Code</a><ul>
 <li class="chapter" data-level="1.1" data-path="r-code.html"><a href="r-code.html#assigned-reading"><i class="fa fa-check"></i><b>1.1</b> Assigned Reading</a></li>
-<li class="chapter" data-level="1.2" data-path="r-code.html"><a href="r-code.html#how-r-executes-code"><i class="fa fa-check"></i><b>1.2</b> How R Executes Code</a></li>
+<li class="chapter" data-level="1.2" data-path="r-code.html"><a href="r-code.html#how-computers-execute-code"><i class="fa fa-check"></i><b>1.2</b> How Computers Execute Code</a></li>
 <li class="chapter" data-level="1.3" data-path="r-code.html"><a href="r-code.html#running-r-code-from-source-files"><i class="fa fa-check"></i><b>1.3</b> Running R Code from Source Files</a></li>
 <li class="chapter" data-level="1.4" data-path="r-code.html"><a href="r-code.html#exercises"><i class="fa fa-check"></i><b>1.4</b> Exercises</a></li>
 </ul></li>
@@ -150,14 +150,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://r4ds.had.co.nz/introduction.html#prerequisites">R4DS Sections 1.4-1.6</a></li>
 </ul>
 </div>
-<div id="how-r-executes-code" class="section level2">
-<h2><span class="header-section-number">1.2</span> How R Executes Code</h2>
+<div id="how-computers-execute-code" class="section level2">
+<h2><span class="header-section-number">1.2</span> How Computers Execute Code</h2>
+<p>The following notes are based upon the first chapter of <span class="citation">Gaddis (<a href="#ref-gaddis">2005</a>)</span>.</p>
+<p>Figure 1-8 from <span class="citation">Gaddis (<a href="#ref-gaddis">2005</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Clearly define what the program is to do.</li>
+<li>Visualize the program running on the computer.</li>
+<li>Use design tools such as a hierarchy chart, flowcharts, or pseudocode to create a model of the program.</li>
+<li>Check the model for logical errors.</li>
+<li>Type the code, save it, and compile it.</li>
+<li>Correct any errors found during compilation. Repeat steps 5 and 6 as many times as necessary.</li>
+<li>Run the program with test data for input.</li>
+<li>Correct any errors found while running the program. Repeat steps 5 through 8 as many times as necessary.</li>
+<li>Validate the results of the program.</li>
+</ol>
+<p>Some slight modifications are needed for interpretted languages like R. The “compile it” part of step 5 does not apply to most things you do in R, and you will typically combine steps 5 and 7 into “Type, the code, save it, and run it with test data for input.” Steps 6 and 8 also occur at the same time, but are conceptually different. Step 6 is about making sure your code makes sense to the computer; step 8 is about making sure the computer interprets your code the way you intended.</p>
 </div>
 <div id="running-r-code-from-source-files" class="section level2">
 <h2><span class="header-section-number">1.3</span> Running R Code from Source Files</h2>
 <p>The file <a href="examples/intro_example.r"><code>examples/intro_example.r</code></a> contains the following code.</p>
-<pre><code>#&gt; # Add two numbers.
-#&gt; 2 + 3</code></pre>
+<pre><code># Add two numbers.
+2 + 3</code></pre>
 <p>In the R terminal, use the <code>source()</code> command to run the code in the file. This command is an example of a <em>function</em>, or block of code that is reused by calling its name. The text in parentheses are inputs to the function, called <em>arguments</em>. The first argument (in quotes) is the name of the source file to read. The second argument, <code>print.eval = TRUE</code>, tells R to print out the results of any expressions in the source file. We will learn much more about functions in Section 5.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&#39;examples/intro_example.r&#39;</span>, <span class="dt">print.eval =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <pre><code>#&gt; [1] 5</code></pre>
@@ -171,6 +185,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>The traditional first program written by students in a computer programming course is <code>Hello World!</code>, which simply prints the text “Hello World!” on the screen. Write R code to output “Hellow World!” (or something similar), save the code in a <code>.r</code> file, and run the file using either <code>source()</code> or <code>Rscript</code>.</li>
 </ol>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-gaddis">
+<p>Gaddis, T. 2005. <em>Standard Version of Starting Out with C++, 4th Ed., 2005 Update</em>. Addison-Wesley Longman, Incorporated.</p>
 </div>
 </div>
             </section>

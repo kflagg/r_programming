@@ -26,7 +26,7 @@
 <meta name="author" content="K.A. Flagg">
 
 
-<meta name="date" content="2017-05-10">
+<meta name="date" content="2017-05-15">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -107,7 +107,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="1" data-path="r-code.html"><a href="r-code.html"><i class="fa fa-check"></i><b>1</b> R Code</a><ul>
 <li class="chapter" data-level="1.1" data-path="r-code.html"><a href="r-code.html#assigned-reading"><i class="fa fa-check"></i><b>1.1</b> Assigned Reading</a></li>
-<li class="chapter" data-level="1.2" data-path="r-code.html"><a href="r-code.html#how-r-executes-code"><i class="fa fa-check"></i><b>1.2</b> How R Executes Code</a></li>
+<li class="chapter" data-level="1.2" data-path="r-code.html"><a href="r-code.html#how-computers-execute-code"><i class="fa fa-check"></i><b>1.2</b> How Computers Execute Code</a></li>
 <li class="chapter" data-level="1.3" data-path="r-code.html"><a href="r-code.html#running-r-code-from-source-files"><i class="fa fa-check"></i><b>1.3</b> Running R Code from Source Files</a></li>
 <li class="chapter" data-level="1.4" data-path="r-code.html"><a href="r-code.html#exercises"><i class="fa fa-check"></i><b>1.4</b> Exercises</a></li>
 </ul></li>
@@ -140,13 +140,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">An Introduction to Object-Oriented Programming Using R</h1>
 <h4 class="author"><em>K.A. Flagg</em></h4>
-<h4 class="date"><em>May 10, 2017</em></h4>
+<h4 class="date"><em>May 15, 2017</em></h4>
 </div>
 <div id="syllabus" class="section level1 unnumbered">
 <h1>Syllabus</h1>
-<p>Statistics and Data Science are fields that increasingly require computational problem-solving skills and bespoke solutions that are not implemented in point-and-click software. Thus, programming languages developed for scientific computing have become ubiquitous, and the free R language <span class="citation">(R Core Team <a href="references.html#ref-baser">2017</a>)</span> is now central to many Statistics courses and jobs.</p>
-<p>Unfortunately, Statistics education often focuses exclusively on using R as a tool for implementing and demonstrating statistical concepts; this does a disservice to students who are left to fend for themselves when presented tasks or error messages that do not fit into their set of familiar R experiences. Students in Statistics programs need to be R programmers, not just R users. Therefore, the goal of this course is to teach you to think like a programmer.</p>
-<p>This course will teach you both R and the concepts of object-oriented programming. If you are an aspiring statistician who wants to improve in either or both of those areas, this course is for you. If you have no R or programming experience, you will get a solid foundation in both. If you have used R before but had no formal programming training, this course will make you a much more effective R programmer. If you have had training as an object-oriented programmer, you will learn the R language and how to apply object-oriented programming to statistical analysis.</p>
+<p>Statistics and Data Science are fields that increasingly require computational problem-solving skills and bespoke solutions that are not implemented in point-and-click software. Thus, programming languages developed for scientific computing have become ubiquitous, and the free R language <span class="citation">(R Core Team <a href="#ref-baser">2017</a>)</span> is now central to many Statistics courses and jobs.</p>
+<p>Unfortunately, Statistics education often focuses exclusively on using R as a tool for implementing and demonstrating statistical concepts; this does a disservice to students who are left to fend for themselves when presented tasks or error messages that do not fit into their set of familiar R experiences. Statisticians and Students in Statistics programs need to be R programmers, not just R users. Therefore, the goal of this course is to teach you to think like a programmer.</p>
+<p>This course will teach you both R and the concepts of object-oriented programming. If you are an aspiring statistician who wants to improve in either or both of those areas, this course is for you. If you have no R or programming experience, you will get a solid foundation in both. If you have used R before but had no formal programming training, this course will make you a much more effective R programmer. If you have had training in other object-oriented languages, you will learn the R language and how to apply object-oriented programming to statistical analysis. However, this course will not teach you Statistical concepts or give you a broad overview of Statistics features in R; many exercises and examples have a Statistics context but the focus is entirely on programming.</p>
 <div id="learning-outcomes" class="section level2 unnumbered">
 <h2>Learning Outcomes</h2>
 <p>Upon completion of this course, you will be able to:</p>
@@ -156,13 +156,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Describe and implement functions, objects, and methods in R.</li>
 <li>Develop conceptual models of programs and translate them into code.</li>
 <li>Debug your own programs and implement error/warning messages in R.</li>
+<li>Make your code reusable and shareable via R packages.</li>
 </ul>
 </div>
 <div id="materials" class="section level2 unnumbered">
 <h2>Materials</h2>
 <p>Naturally, you will need a recent version of <a href="https://www.r-project.org/">R</a>.</p>
-<p>The primary text for this course is <em>R for Data Science</em> <span class="citation">(Wickham and Grolemund <a href="references.html#ref-r4ds">2017</a>)</span>. The <strong>required</strong> readings will be assigned from the most up-to-date online version of <a href="http://r4ds.had.co.nz/">r4ds</a>, but you may purchase a physical copy if you wish. This book teaches a useful and standard set of R tools, and is organized to emphasize analysis and communication more than programming (but the brief section on programming is excellent). Please note that we will cover the topics in a very different order from how they are presented in the book and I will frequently point out the differences in pedagogical philosophy between statisticians and computer scientists.</p>
-<p>I will adapt additional material from <em>The Art of R Programming</em> <span class="citation">(Matloff <a href="references.html#ref-matloff">2011</a>)</span>. This is a great reference for the basic features and programming constructs of R, but acquiring your own copy is <strong>optional</strong>.</p>
+<p>The primary text for this course is <em>R for Data Science</em> <span class="citation">(Wickham and Grolemund <a href="#ref-r4ds">2017</a>)</span>. The <strong>required</strong> readings will be assigned from the most up-to-date <a href="http://r4ds.had.co.nz/">online version</a>, but you may purchase a physical copy if you wish. This book teaches a useful and standard set of R tools, and is organized to emphasize analysis and communication more than programming (but the brief section on programming is excellent). Please note that we will cover the topics in a very different order from how they are presented in the book and I will frequently point out the differences in pedagogical philosophy between statisticians and computer scientists.</p>
+<p>I will take some problems from and assign some <strong>optional</strong> readings out of <em>Advanced R</em> <span class="citation">(Wickham <a href="#ref-advr">2015</a>)</span>, another book that is available both in print and <a href="http://adv-r.had.co.nz/">online</a>. This is high level book for those who want to learn the gritty details of how R works, and is a great resource for students with a solid foundation in R and/or programming who want to deepen their understanding.</p>
+<p>I will adapt additional material from <em>The Art of R Programming</em> <span class="citation">(Matloff <a href="#ref-matloff">2011</a>)</span>. This is a great reference for the basic features and programming constructs of R, but acquiring your own copy is <strong>optional</strong>.</p>
 </div>
 <div id="course-outline" class="section level2 unnumbered">
 <h2>Course Outline</h2>
@@ -184,11 +186,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="conditional-execution-and-loops.html#conditional-execution-and-loops">Conditional Execution and Loops</a></li>
 <li>Functions</li>
+<li>Debugging</li>
 <li>Applying Functions</li>
+<li>Efficiency and Parallelization</li>
 <li>Objects and Methods</li>
 <li>Introduction to Packages</li>
 </ol>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-baser">
+<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+</div>
+<div id="ref-r4ds">
+<p>Wickham, H., and G. Grolemund. 2017. <em>R for Data Science</em>. O’Reilly Media. <a href="http://r4ds.had.co.nz/" class="uri">http://r4ds.had.co.nz/</a>.</p>
+</div>
+<div id="ref-advr">
+<p>Wickham, H. 2015. <em>Advanced R</em>. CRC Press. <a href="http://adv-r.had.co.nz/" class="uri">http://adv-r.had.co.nz/</a>.</p>
+</div>
+<div id="ref-matloff">
+<p>Matloff, N. 2011. <em>The Art of R Programming: A Tour of Statistical Software Design</em>. No Starch Press.</p>
 </div>
 </div>
             </section>

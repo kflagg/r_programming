@@ -7,7 +7,7 @@ site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
     split: chapter
-    split_bib: no
+    split_bib: yes
 rmd_files: [
   "01-r_code.rmd",
   "02-data_types.rmd",
@@ -37,18 +37,21 @@ Unfortunately, Statistics education often focuses exclusively on using R as a
 tool for implementing and demonstrating statistical concepts; this does a
 disservice to students who are left to fend for themselves when presented
 tasks or error messages that do not fit into their set of familiar R
-experiences. Students in Statistics programs need to be R programmers, not
-just R users. Therefore, the goal of this course is to teach you to think like
-a programmer.
+experiences. Statisticians and Students in Statistics programs need to be R
+programmers, not just R users. Therefore, the goal of this course is to teach
+you to think like a programmer.
 
 This course will teach you both R and the concepts of object-oriented
 programming. If you are an aspiring statistician who wants to improve in
 either or both of those areas, this course is for you. If you have no R or
 programming experience, you will get a solid foundation in both. If you have
 used R before but had no formal programming training, this course will make
-you a much more effective R programmer. If you have had training as an
-object-oriented programmer, you will learn the R language and how to apply
-object-oriented programming to statistical analysis.
+you a much more effective R programmer. If you have had training in other
+object-oriented languages, you will learn the R language and how to apply
+object-oriented programming to statistical analysis. However, this course will
+not teach you Statistical concepts or give you a broad overview of Statistics
+features in R; many exercises and examples have a Statistics context but the
+focus is entirely on programming.
 
 ## Learning Outcomes {-}
 
@@ -59,20 +62,28 @@ Upon completion of this course, you will be able to:
 - Describe and implement functions, objects, and methods in R.
 - Develop conceptual models of programs and translate them into code.
 - Debug your own programs and implement error/warning messages in R.
+- Make your code reusable and shareable via R packages.
 
 ## Materials {-}
 
 Naturally, you will need a recent version of [R](https://www.r-project.org/).
 
 The primary text for this course is _R for Data Science_ [@r4ds]. The
-__required__ readings will be assigned from the most up-to-date online version
-of [r4ds](http://r4ds.had.co.nz/), but you may purchase a physical copy
+__required__ readings will be assigned from the most up-to-date
+[online version](http://r4ds.had.co.nz/), but you may purchase a physical copy
 if you wish. This book teaches a useful and standard set of R tools, and is
 organized to emphasize analysis and communication more than programming (but
 the brief section on programming is excellent). Please note that we will cover the
 topics in a very different order from how they are presented in the book and I
 will frequently point out the differences in pedagogical philosophy between
 statisticians and computer scientists.
+
+I will take some problems from and assign some __optional__ readings out of
+_Advanced R_ [@advr], another book that is available both in  print and
+[online](http://adv-r.had.co.nz/). This is high level book for those who want
+to learn the gritty details of how R works, and is a great resource for
+students with a solid foundation in R and/or programming who want to deepen
+their understanding.
 
 I will adapt additional material from _The Art of R Programming_ [@matloff].
 This is a great reference for the basic features and programming constructs of
@@ -85,16 +96,18 @@ should be read first), then includes additional notes elaborating upon the
 important concepts or covering additional topics not included in the reading,
 and ends with exercises to be done as homework.
 
-1. [R Code][R Code]
+1.  [R Code][R Code]
     - Input, output, running code
-2. [Data Types and Operations][Data Types and Operations]
+2.  [Data Types and Operations][Data Types and Operations]
     - Basic variable types (character, numeric, logical)
     - Mathematical operations
     - Special values (`NULL`, `Inf`, `NaN`)
-3. [Data Structures][Data Structures]
+3.  [Data Structures][Data Structures]
     - Vectors, matrices, arrays, lists, data frames
-4. [Conditional Execution and Loops][Conditional Execution and Loops]
-5. Functions
-6. Applying Functions
-7. Objects and Methods
-8. Introduction to Packages
+4.  [Conditional Execution and Loops][Conditional Execution and Loops]
+5.  Functions
+6.  Debugging
+7.  Applying Functions
+8.  Efficiency and Parallelization
+9.  Objects and Methods
+10. Introduction to Packages
