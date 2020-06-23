@@ -4,7 +4,7 @@
 sky <- 'blue'
 if(sky == 'blue'){
   cat('Earth')
-}else if(sky == 'ref'){
+}else if(sky == 'red'){
   cat('Mars')
 }else cat('Where are we?')
 ```
